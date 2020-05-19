@@ -4,14 +4,38 @@ namespace App\Repository;
 
 interface RepositoryInterface
 {
-    public function getAllBlog();
+    /**
+     * Get all
+     * @return mixed
+     */
+    public function getAll();
 
-    public function getBlogById($id);
+    /**
+     * Get one
+     * @param $id
+     * @return mixed
+     */
+    public function find($id);
 
-    public function addBlog($request);
+    /**
+     * Create
+     * @param array $attributes
+     * @return mixed
+     */
+    public function create(array $attributes);
 
-    public function updateBlog($id, array $attributes);
+    /**
+     * Update
+     * @param $id
+     * @param array $attributes
+     * @return mixed
+     */
+    public function update($id, array $attributes);
 
-    public function deleteBlog($id);
+    /**
+     * Delete
+     * @param $id
+     * @return mixed
+     */
+    public function delete($id);
 }
-
