@@ -2409,3 +2409,7 @@
 [Thu May 14 13:23:41.725496 2020] [core:warn] [pid 49] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
 [Thu May 14 13:23:41.735986 2020] [mpm_prefork:notice] [pid 49] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
 [Thu May 14 13:23:41.736522 2020] [core:notice] [pid 49] AH00094: Command line: '/usr/sbin/apache2'
+[Tue May 19 01:14:04.731089 2020] [core:warn] [pid 65] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue May 19 01:14:04.739425 2020] [mpm_prefork:notice] [pid 65] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Tue May 19 01:14:04.739957 2020] [core:notice] [pid 65] AH00094: Command line: '/usr/sbin/apache2'
+[Tue May 19 12:41:28.139959 2020] [php7:error] [pid 1622] [client 172.18.0.1:45334] PHP Fatal error:  Class 'App\\Http\\Controllers\\Admin\\Controller' not found in /var/www/html/app/Http/Controllers/Admin/BlogController.php on line 11
