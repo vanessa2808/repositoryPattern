@@ -2,22 +2,21 @@
 
 namespace App\Repository;
 
-use App\Repository\RepositoryInterface;
-
-abstract class EloquentRepository implements RepositoryInterface
+abstract class BlogRepository implements RepositoryInterface
 {
 
     protected $_blog;
 
 
-    public function __construct()
-    {
+    public function __construct()  {
         $this->setModel();
     }
 
+    public function getModel()
+    {
+        return \App\Models\Blog::class;
 
-    abstract public function getModel();
-
+    }
     public function setModel()
     {
         $this->_blog = app()->make(
@@ -26,29 +25,29 @@ abstract class EloquentRepository implements RepositoryInterface
     }
 
 
-    public function getAll()
+    public function getAllBlog()
     {
 
         return $this->_blog->all();
     }
 
 
-    public function find($id)
+    public function getBlogById($id)
     {
-        $result = $this->_blog->find($id);
+        $idBlog = $this->_blog->find($id);
 
-        return $result;
+        return $idBlog;
     }
 
 
-    public function create(array $attributes)
+    public function addBlog(array $attributes)
     {
 
         return $this->_blog->create($attributes);
     }
 
 
-    public function update($id, array $attributes)
+    public function updateBlog($id, array $attributes)
     {
         $result = $this->find($id);
         if ($result) {
@@ -60,7 +59,7 @@ abstract class EloquentRepository implements RepositoryInterface
     }
 
 
-    public function delete($id)
+    public function deleteBlog($id)
     {
         $result = $this->find($id);
         if ($result) {
