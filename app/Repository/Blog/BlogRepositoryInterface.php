@@ -3,14 +3,18 @@ namespace App\Repository\Blog;
 
 interface BlogRepositoryInterface
 {
-    public function all();
+    public function getAll();
 
-    public function create($data);
 
     public function find($id);
 
-    public function delete($id);
 
-    public function update($id, array $data);
+    public function create(array $attributes);
+
+
+    public function update($id, array $attributes);
+
+
+    public function delete($id);
 
 }

@@ -17,8 +17,12 @@ Route::get('/', function () {
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin/blog/add_blog', 'Admin\BlogController@getAddBlog')->name('add_blog');
-Route::post('/admin/blog/add_blog', 'Admin\BlogController@postAddBlog')->name('add_blog');
-Route::get('/admin/blog/list_blog', 'Admin\BlogController@index')->name('add_blog');
+Route::get('admin/blog/add_blog', ['as' => 'admin.blog.add_blog', 'uses' => 'Admin\BlogController@getAddBlog']);
+Route::post('admin/blog/add_blog', ['as' => 'admin.blog.add_blog', 'uses' => 'Admin\BlogController@postAddBlog']);
+Route::get('admin/blog/list_blog', ['as' => 'admin.blog.list_blog', 'uses' => 'Admin\BlogController@index']);
+
+Route::get('admin/blog/edit_blog/{id}', ['as' => 'admin.blog.edit_blog', 'uses' => 'Admin\BlogController@getEditBlog']);
+Route::post('admin/blog/edit_blog/{id}', ['as' => 'admin.blog.edit_blog', 'uses' => 'Admin\BlogController@postEditBlog']);
+Route::get('admin/blog/delete/{id}', ['as' => 'admin.blog.delete', 'uses' => 'Admin\BlogController@delete']);
 
 Auth::routes();

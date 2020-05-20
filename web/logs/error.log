@@ -2420,3 +2420,11 @@
 [Tue May 19 14:43:50.925500 2020] [php7:error] [pid 73] [client 172.18.0.1:45594] PHP Fatal error:  Interface 'App\\Repository\\BlogRepositoryInterface' not found in /var/www/html/app/Repository/Blog/BlogEloquentRepository.php on line 8
 [Tue May 19 14:45:21.638656 2020] [php7:error] [pid 1623] [client 172.18.0.1:45620] PHP Fatal error:  Interface 'App\\Repository\\BlogRepositoryInterface' not found in /var/www/html/app/Repository/Blog/BlogEloquentRepository.php on line 8
 [Tue May 19 14:46:07.441983 2020] [php7:error] [pid 72] [client 172.18.0.1:45642] PHP Fatal error:  Interface 'App\\Repository\\BlogRepositoryInterface' not found in /var/www/html/app/Repository/Blog/BlogEloquentRepository.php on line 8
+[Wed May 20 13:14:44.186113 2020] [core:warn] [pid 49] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed May 20 13:14:44.199574 2020] [mpm_prefork:notice] [pid 49] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Wed May 20 13:14:44.200090 2020] [core:notice] [pid 49] AH00094: Command line: '/usr/sbin/apache2'
+[Wed May 20 13:16:10.288295 2020] [php7:error] [pid 54] [client 172.18.0.1:54622] PHP Fatal error:  Declaration of App\\Repository\\Blog\\BlogEloquentRepository::create(array $attributes) must be compatible with App\\Repository\\Blog\\BlogRepositoryInterface::create($data) in /var/www/html/app/Repository/Blog/BlogEloquentRepository.php on line 7
+[Wed May 20 13:45:29.546906 2020] [core:warn] [pid 49] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed May 20 13:45:29.552429 2020] [mpm_prefork:notice] [pid 49] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Wed May 20 13:45:29.552950 2020] [core:notice] [pid 49] AH00094: Command line: '/usr/sbin/apache2'
+[Wed May 20 13:50:45.315146 2020] [php7:error] [pid 55] [client 172.19.0.1:40034] PHP Fatal error:  Declaration of App\\Repository\\Blog\\BlogEloquentRepository::create(array $attributes) must be compatible with App\\Repository\\Blog\\BlogRepositoryInterface::create($title, $description, $writer) in /var/www/html/app/Repository/Blog/BlogEloquentRepository.php on line 7

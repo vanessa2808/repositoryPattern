@@ -67,7 +67,7 @@
                                         <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                             <div class="basic-login-inner">
                                                 <h3>Add Blog</h3>
-                                                <form action="#" method="POST" enctype="multipart/form-data">
+                                                <form action="admin/blog/add_blog" method="POST" enctype="multipart/form-data">
                                                     @csrf
 
                                                     <div class="form-group-inner">
