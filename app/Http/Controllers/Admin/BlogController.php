@@ -12,7 +12,7 @@ use phpDocumentor\Reflection\Types\Self_;
 
 class BlogController extends Controller
 {
-    protected $blog;
+    protected $blogEloquentRepository;
 
 
     public function __construct(BlogEloquentRepository $_blogEloquentRepository = null)
@@ -88,7 +88,7 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function deBlog($id)
+    public function delete($id)
     {
         $blogEloquentRepository = $this->blogEloquentRepository->delete($id);
         if($blogEloquentRepository == self::RETURN_STR_ZERO){
