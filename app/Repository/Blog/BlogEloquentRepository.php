@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Repository\Blog;
+use Illuminate\Http\Request;
+use App\Http\Requests\BlogRequest;
 
 use App\Repository\Blog\BlogRepositoryInterface;
 
-abstract class BlogEloquentRepository implements BlogRepositoryInterface
+public class BlogEloquentRepository implements BlogRepositoryInterface
 {
     /**
      * @var \Illuminate\Database\Eloquent\Model
@@ -18,12 +20,16 @@ abstract class BlogEloquentRepository implements BlogRepositoryInterface
     {
         $this->setModel();
     }
+    public function model()
+    {
+        return \App\Models\Blog::class;
+    }
+
 
     /**
      * get model
      * @return string
      */
-    abstract public function getModel();
 
     /**
      * Set model
@@ -62,12 +68,30 @@ abstract class BlogEloquentRepository implements BlogRepositoryInterface
      * @param array $attributes
      * @return mixed
      */
-    public function create(array $attributes)
+    public function create( array $attributes)
     {
+        $newBlog = new blog();
+        $newBlog->title = $request->title;
+        $newBlog->description = $request->description;
+        $newBlog->created_at = Carbon::now();
 
-        return $this->_model->create($attributes);
+        if(!$newBlog->save()){
+            return self::RETURN_STR_ZERO;
+        }
+        return $newBlog;
     }
+    public function addNewBlog($request){
+        $newBlog = new blog();
+        $newBlog->title = $request->title;
+        $newBlog->description = $request->description;
+        $newBlog->created_at = Carbon::now();
 
+        if(!$newBlog->save()){
+            return self::RETURN_STR_ZERO;
+        }
+        return $newBlog;
+
+    }
     /**
      * Update
      * @param $id
