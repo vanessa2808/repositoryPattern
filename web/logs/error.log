@@ -2428,5 +2428,3 @@
 [Wed May 20 13:45:29.552429 2020] [mpm_prefork:notice] [pid 49] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
 [Wed May 20 13:45:29.552950 2020] [core:notice] [pid 49] AH00094: Command line: '/usr/sbin/apache2'
 [Wed May 20 13:50:45.315146 2020] [php7:error] [pid 55] [client 172.19.0.1:40034] PHP Fatal error:  Declaration of App\\Repository\\Blog\\BlogEloquentRepository::create(array $attributes) must be compatible with App\\Repository\\Blog\\BlogRepositoryInterface::create($title, $description, $writer) in /var/www/html/app/Repository/Blog/BlogEloquentRepository.php on line 7
-[Thu May 21 00:21:17.164913 2020] [mpm_prefork:notice] [pid 35] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
-[Thu May 21 00:21:17.166267 2020] [core:notice] [pid 35] AH00094: Command line: '/usr/sbin/apache2'
