@@ -2,7 +2,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Repository\Blog\BlogRepositoryInterface;
 use App\Models\Blog;
 
 use App\Repository\Blog\BlogEloquentRepository;

@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('admin/blog/add_blog', ['as' => 'admin.blog.add_blog', 'uses' => 'Admin\BlogController@getAddBlog']);
-Route::post('admin/blog/add_blog', ['as' => 'admin.blog.add_blog', 'uses' => 'Admin\BlogController@postAddBlog']);
+Route::post('admin/blog/add_blog', ['as' => 'admin.blog.create', 'uses' => 'Admin\BlogController@postAddBlog']);
 Route::get('admin/blog/list_blog', ['as' => 'admin.blog.list_blog', 'uses' => 'Admin\BlogController@index']);
 
 Route::get('admin/blog/edit_blog/{id}', ['as' => 'admin.blog.edit_blog', 'uses' => 'Admin\BlogController@getEditBlog']);
